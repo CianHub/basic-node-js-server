@@ -7,7 +7,9 @@ const server = http.createServer((req, res) => {
     res.setHeader('Content-Type', 'text/html');
     res.write('<html>');
     res.write('<head><title>Index</title></head>');
-    res.write('<body><h1>Index</h1></body>');
+    res.write(
+      '<body><h1>Index</h1><form action="/1" method="POST"><input type="text" name="input"><button type="submit">Click</button></form></body>'
+    );
     res.write('</html>');
     res.end();
   } else {
